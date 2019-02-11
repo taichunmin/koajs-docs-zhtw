@@ -1,6 +1,6 @@
 language: node_js
 script:
-  - npm run docs:build
+  - yarn build
 deploy:
   provider: pages
   skip-cleanup: true
