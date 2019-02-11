@@ -4,6 +4,8 @@ node_js:
 cache:
   directories:
     - "node_modules"
+env:
+  - WEB_INDEX=.vuepress/dist/index.html
 install:
   - yarn
   - yarn upgrade
