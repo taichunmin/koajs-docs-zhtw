@@ -4,8 +4,9 @@
     "build": "vuepress build ."
   },
   "devDependencies": {
+    "limax": "^1.7.0",
     "node-sass": "^4.11.0",
     "sass-loader": "^7.1.0",
-    "limax": "^1.7.0"
+    "vuepress": "^1.0.0-alpha.37"
   }
 }
