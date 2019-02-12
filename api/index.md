@@ -1,8 +1,8 @@
-# Installation
+# 安裝
 
-  Koa requires __node v7.6.0__ or higher for ES2015 and async function support.
+  為了 ES2015 及 async 函式的支援，Koa 需要使用 __node >= v7.6.0__ 的環境。
 
-  You can quickly install a supported version of node with your favorite version manager:
+  你可以使用自己喜歡的版本管理器快速安裝支援的 node 版本：
 
 ```bash
 $ nvm install 7
@@ -10,20 +10,19 @@ $ npm i koa
 $ node my-koa-app.js
 ```
 
-## Async Functions with Babel
+## 使用 Babel 來支援 Async 函式
 
-To use `async` functions in Koa in versions of node < 7.6, we recommend using [babel's require hook](http://babeljs.io/docs/usage/babel-register/).
+為了在 node < 7.6 的環境中使用 `async` 函式，我們推薦使用 [babel's require hook](http://babeljs.io/docs/usage/babel-register/)。
 
 ```js
 require('babel-register');
-// require the rest of the app that needs to be transpiled after the hook
+// 應用程式的其他 require 都需要被放到 hook 後面
 const app = require('./app');
 ```
 
-To parse and transpile async functions,
-you should at a minimum have the [transform-async-to-generator](http://babeljs.io/docs/plugins/transform-async-to-generator/)
-or [transform-async-to-module-method](http://babeljs.io/docs/plugins/transform-async-to-module-method/) plugins.
-For example, in your `.babelrc` file, you should have:
+要解析和編譯 async 函式, 你至少應該有 [transform-async-to-generator](http://babeljs.io/docs/plugins/transform-async-to-generator/) 或 [transform-async-to-module-method](http://babeljs.io/docs/plugins/transform-async-to-module-method/) 插件。
+
+例如，在你的 `.babelrc` 檔案中，你應該要有如下的設定：
 
 ```json
 {
@@ -31,7 +30,7 @@ For example, in your `.babelrc` file, you should have:
 }
 ```
 
-You can also use the [env preset](http://babeljs.io/docs/plugins/preset-env/) with a target option `"node": "current"` instead.
+你也可以用 [env preset](http://babeljs.io/docs/plugins/preset-env/) 的 target 參數 `"node": "current"` 替代。
 
 # Application
 
