@@ -1,5 +1,5 @@
 ---
-actionLink: /guide
+actionLink: /api/
 actionText: 快速上手 ➜
 footer: MIT Licensed | Copyright © 2018-present Koa contributors
 heroImage: /hero.png
